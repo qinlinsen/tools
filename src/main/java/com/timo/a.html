@@ -1,0 +1,16 @@
+<th th:text="#{recogSet_engineEdit_factoryName}+':'"></th>
+<td>
+    <input type="text" id="companyName" th:field="*{companyName}" name="companyName" class="easyui-textbox"
+           data-options="required:true,validType:['untable','byteLength[1,128]']" />
+</td>
+
+
+
+<th>
+    <label for="status" th:text="#{recogSet_engineEdit_bei}"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="status" th:text="#{recogSet_engineEdit_zhu}+':'"></label>
+</th>
+<td>
+    <input type="text" name="remark" class="easyui-textbox" th:field="*{remark}"
+           data-options="validType:['untable','byteLength[1,128]']" />
+</td>
