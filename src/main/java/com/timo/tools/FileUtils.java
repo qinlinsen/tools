@@ -27,7 +27,11 @@ public class FileUtils {
             String sourceDataStr = "";
             while ((sourceDataStr = in.readLine()) != null) {
                 if ((sourceDataStr.length() > 0)) {
-                    process(sourceDataStr, destinationPath, orgCode);
+                    try {
+                        process(sourceDataStr, destinationPath, orgCode);
+                    } catch (Exception e) {
+                        System.out.println("process is encounter an exception :"+e);
+                    }
                 }
             }
             System.out.println("图片生成完成");
